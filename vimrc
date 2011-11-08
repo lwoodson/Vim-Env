@@ -18,3 +18,7 @@ match OverLength /\%81v.\+/
 set hlsearch
 nmap n nzz
 nmap N Nzz
+
+"plugins
+:filetype plugin on
+:helptags ~/.vim/doc
