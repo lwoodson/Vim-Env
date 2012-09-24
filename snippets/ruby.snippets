@@ -418,3 +418,43 @@ snippet tas
 	task :${2:task_name => [:dependent, :tasks]} do
 		${3}
 	end
+snippet "
+	"${1}"
+snippet '
+	'${1}'
+snippet {
+	{${1}}
+snippet desc
+	describe ${1:Class} do
+	  ${2}
+	end
+snippet it
+	it "${1:should}" do
+	  ${2}
+	end
+snippet before
+	before ${1::each} do
+	  ${2}
+	end
+snippet ctx
+	context "${1:desc}" do
+	  ${2}
+	end
+snippet traise
+	lambda {${2}}.should_raise_error(${1:Exception})${3}
+snippet fg
+	require 'factory_girl'
+
+	FactoryGirl.define do
+	  ${1:# factory defs}
+	end
+snippet fact
+	factory ${1:symbol} do
+	  ${2:attributes}
+	end
+snippet fgc
+	FactoryGirl.create ${1::symbol}
+snippet dbg ruby-debug
+	require 'ruby-debug'; Debugger.start; debugger
+snippet dbg debugger
+	require 'debugger'; debugger

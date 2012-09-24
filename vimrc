@@ -19,6 +19,24 @@ set hlsearch
 nmap n nzz
 nmap N Nzz
 
+"ctags
+map <silent><C-Right> <C-]>
+map <silent><C-Left> <C-T>
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 "plugins
 :filetype plugin on
 :helptags ~/.vim/doc
+let g:NERDTreeChDirMode=2
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+nmap <F8> :TagbarToggle<CR>
+
+noremap <F3> :call Svndiff("prev")<CR> 
+noremap <F4> :call Svndiff("next")<CR> 
+noremap <F5> :call Svndiff("clear")<CR> 
+
+hi DiffAdd      ctermfg=16 ctermbg=252 gui=bold guifg=#000000 guibg=#65C254
+hi DiffDelete   ctermfg=16 ctermbg=88 gui=bold guifg=#000000 guibg=#902020
+hi DiffChange   ctermfg=16 ctermbg=215 gui=bold guifg=#000000 guibg=#ffb964
