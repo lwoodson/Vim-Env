@@ -458,3 +458,16 @@ snippet dbg ruby-debug
 	require 'ruby-debug'; Debugger.start; debugger
 snippet dbg debugger
 	require 'debugger'; debugger
+snippet gemspec
+	Gem::Specification.new do |s|
+	  s.name	= '${1:name}'
+	  s.version	= '0.0.1'
+	  s.date	= '`system("date +%Y-%m-%d")`'
+	  s.summary	= '${2:summary}'
+	  s.description	= s.summary
+	  s.authors     = ['Lance Woodson']
+	  s.email	= 'lance@webmaneuvers.com'
+	  s.files	= ["lib/$1.rb"] 
+	  s.homepage	= 'https://github.com/lwoodson/$1/'
+	end
+	
