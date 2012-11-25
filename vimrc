@@ -41,3 +41,6 @@ hi DiffAdd      ctermfg=16 ctermbg=252 gui=bold guifg=#000000 guibg=#65C254
 hi DiffDelete   ctermfg=16 ctermbg=88 gui=bold guifg=#000000 guibg=#902020
 hi DiffChange   ctermfg=16 ctermbg=215 gui=bold guifg=#000000 guibg=#ffb964
 
+"xml-plugin
+let xml_use_html = 1
+let xml_use_xhtml = 1
